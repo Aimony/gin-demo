@@ -1,0 +1,135 @@
+openapi: 3.0.1
+info:
+  title: test_api
+  description: ''
+  version: 1.0.0
+tags: []
+paths:
+  /book/list:
+    get:
+      summary: list
+      deprecated: false
+      description: ''
+      tags: []
+      parameters:
+        - name: id
+          in: query
+          description: ''
+          required: false
+          example: '1'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    type: integer
+                  BookName:
+                    type: string
+                  BookPrice:
+                    type: number
+                required:
+                  - ID
+                  - BookName
+                  - BookPrice
+          headers: {}
+      security: []
+  /book/add:
+    post:
+      summary: add
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              bookname: Go语言编程
+              bookprice: 59.9
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                  - message
+          headers: {}
+      security: []
+  /book/update:
+    post:
+      summary: update
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              id: 7
+              bookname: Go语言编程666666666666666
+              bookprice: 59.9
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                  - message
+          headers: {}
+      security: []
+  /book/delete:
+    post:
+      summary: delete
+      deprecated: false
+      description: ''
+      tags: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              id: 7
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                  - message
+          headers: {}
+      security: []
+components:
+  schemas: {}
+  securitySchemes: {}
+servers: []
